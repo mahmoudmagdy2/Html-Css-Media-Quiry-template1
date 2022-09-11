@@ -1,0 +1,663 @@
+/*
+==========================
+     public style
+==========================
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Tahoma , verdana;
+}
+
+.container{
+    width: 85%;
+    margin: auto;
+}
+
+
+
+/*
+==============================
+    Navbar
+==============================
+*/
+
+.navbar{
+    overflow: hidden;
+    padding: 20px 0;
+    background: #fff;
+    position: relative;
+    
+}
+.navbar .logo {
+    width: 50%;
+    float: left;
+}
+.navbar .logo .logo-item{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.navbar input , .navbar label{
+    position: absolute;
+    top: 13px;
+    right: 25px;
+}
+.navbar input{
+    display: none;
+}
+.navbar label{
+    display: block;
+    height: 15px;
+    width: 15px;
+    background: url(../images/Navbar/open.png) no-repeat;
+    background-size: cover;
+    padding: 20px;
+    cursor: pointer;
+
+}
+.navbar input:checked ~ .ul-list{
+    display: block;
+}
+.navbar input:checked ~ label{
+    background: url(../images/Navbar/close.png) no-repeat;
+    background-size: cover;
+}
+
+.ul-list{
+    width: 50%;
+    float: left;
+    list-style: none;
+
+}
+.ul-list .list-item {
+    display: inline-block;
+}
+.ul-list .list-item a{
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #222;
+    font-weight: bold;
+
+}
+.ul-list .list-item a:hover{
+    color: #eb5424;
+}
+/*
+============================
+    media navbar
+============================
+*/
+
+
+@media (min-width : 992px){
+    .navbar input , .navbar label{
+        display: none;
+    }
+
+}
+
+@media (max-width:991px ){
+    .logo {
+        width: 100%;
+        float: none;
+    }
+    .ul-list{
+        width: 100%;
+        float: left;
+        list-style: none;
+        margin: 20px;
+        display: none;
+    
+    }
+    .ul-list .list-item {
+        display: block;
+        text-align: center;
+    }
+    
+}
+
+
+/*
+==============================
+    Home
+==============================
+*/
+
+.home{
+    height: 500px;
+    background: url(../images/Home/home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    position: relative;
+}
+.home .home-information{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%);
+}
+.home .home-information .home-title{
+    font-size: 40px;
+    color: #444;
+    margin-bottom: 20px;
+}
+.home .home-information .home-info{
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+.home .home-information .home-desc{
+    margin-bottom: 30px;
+    color: #777;
+}
+.home .home-information .home-desc span{
+    color: #000;
+ }
+
+.home .home-information .home-btn{
+    padding: 10px 30px;
+    background: #eb5424;
+    font-size: 18px;
+    font-weight: bold;
+    border: 0;
+    color: #fff;
+}
+
+/*
+==============================
+    Work
+==============================
+*/
+.work{
+    padding: 50px 0;
+    height: auto;
+    overflow: hidden;
+}
+.work .work-title{
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+.work .work-title span{
+    font-weight: normal;
+}
+
+.work .part{
+    width: 30%;
+    float: left;
+    text-align: center;
+    border: 1px solid #888;
+    box-sizing: border-box;
+    height: auto;
+    padding: 100px 0;
+    margin-left: 5%;
+}
+.work .first{
+    margin-left: 0;
+}
+.work .part .icon{
+    margin-bottom: 40px;
+}
+.work .part .part-title{
+    font-size: 20px;
+    color: #eb5424;
+    margin-bottom: 20px;
+}
+.work .part .part-desc{
+    padding: 50px;
+    line-height: 1.5;
+}  
+
+/*
+============================
+    Media work
+============================
+*/
+@media (max-width : 575px){
+    .work .part{
+        width: 100%;
+        float: none;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+@media (min-width : 576px) and (max-width : 767px){
+    .work .part{
+        width: 47%;
+        float: left;
+        margin-bottom: 10px;
+     
+    }
+    .work .last{
+        margin-left: 0;
+    }
+
+}
+
+/*
+==============================
+    Portfolio
+==============================
+*/
+ .portfolio{
+    background: #ddd;
+    overflow: hidden;
+
+ }
+ .portfolio .portfolio-title{
+    font-size: 35px;
+    text-align: center;
+    padding: 10px;
+    
+ }
+ .portfolio .portfolio-title span{
+    font-weight: normal;
+ }
+.portfolio .portfolio-list{
+    text-align: center;
+    padding: 20px 0;
+}
+.portfolio .portfolio-list .portfolio-list-item{
+    display: inline-block;
+    padding: 5px 20px;
+}
+.portfolio .portfolio-list .portfolio-list-item a{
+    text-decoration: none;
+    color: #222;
+}
+.portfolio .portfolio-list .portfolio-list-item a.active{
+    background: #eb5424;
+    padding: 5px 20px;
+    color: #fff;
+}
+
+.portfolio .box div{
+    width: 25%;
+    float: left;
+    position: relative;
+    font-size: 0;
+
+    
+}
+.portfolio .box div img{
+    width: 100%;
+}
+.portfolio .box div .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 20px;
+    background: rgb(255 118 40 / 53%);
+    opacity: 0;
+
+}
+.portfolio .box div .overlay span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    -webkit-transform: translate(-50% ,-50%);
+    -moz-transform: translate(-50% ,-50%);
+    -ms-transform: translate(-50% ,-50%);
+    -o-transform: translate(-50% ,-50%);
+    background: #fff;
+    padding: 10px 25px;
+    border: 1px solid #eb5424;
+    cursor: pointer;
+}
+.portfolio .box div:hover .overlay{
+    opacity: 1;
+    
+}
+
+/*
+============================
+    Media Portfolio
+============================
+*/
+
+@media (max-width : 575px){
+.portfolio .portfolio-list .portfolio-list-item{
+    display: block;
+    margin: auto;
+    padding: 10px 0;
+}
+
+    .portfolio .box div{
+        width: 100%;
+    }
+
+}
+@media (min-width : 576px) and (max-width : 768px){
+    .portfolio .box div{
+        width: 50%;
+    }
+}
+
+
+/*
+==============================
+    Profile + Skills
+==============================
+*/
+
+.profile-skills{
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+.profile-skills .profile .profile-list span{
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+}
+.profile-skills .profile .profile-list .profile-list-item{
+    margin-bottom: 8px;
+    list-style: none;
+}
+.profile-skills .profile .profile-list span.active{
+    font-weight: normal;
+    color: #eb5424;
+}
+
+.profile-skills .skills .skills-desc{
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.profile-skills .skills .bar{
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.profile-skills .skills .bar .name{
+    float: left;
+    margin-bottom: 5px;
+}
+.profile-skills .skills .bar .prec{
+    float: right;
+    margin-right: 100px;
+    font-size: 10px;
+    color: #777;
+    
+}
+.profile-skills .skills .bar .parent{
+    height: 4px;
+    clear: both;
+    background: #f8f8f8;
+    position: relative;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.profile-skills .skills .bar .parent span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #eb5424;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.profile-skills .skills .bar .parent span.pr1{
+    width: 100%;
+}
+.profile-skills .skills .bar .parent span.pr2{
+    width: 90%;
+}
+.profile-skills .skills .bar .parent span.pr3{
+    width: 80%;
+}
+
+.profile-skills .profile,
+.profile-skills .skills {
+    width: 50%;
+    float: left;
+}
+.profile-skills .profile .profile-title ,
+.profile-skills .skills .skills-title{
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+.profile-skills .profile .profile-title span,
+.profile-skills .skills .skills-title span{
+    font-weight: normal;
+}
+
+/*
+============================
+    Media Profile + skills
+============================
+*/
+@media (max-width : 575px){
+    .profile-skills .profile,
+    .profile-skills .skills {
+        width: 100%;
+        float: none;
+    }
+    .profile-skills .profile .profile-title ,
+    .profile-skills .skills .skills-title{
+        font-size: 40px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+}
+/*
+==============================
+    Creative Directory
+==============================
+*/
+
+.creative{
+    height: auto;
+    background: url(../images/creative/about-bg.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 70px 0;
+    overflow: hidden;
+}
+.creative .creative-info{
+    width: 50%;
+    float: right;
+}
+.creative .creative-info .creative-title{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.creative .creative-info .creative-title span{
+    font-weight: normal;
+}
+.creative .creative-info .creative-dir{
+    font-size: 35px;
+    color: #eb5424;
+    margin-bottom: 10px;
+
+}
+.creative .creative-info .creative-dir span{
+    font-weight: normal;
+}
+.creative .creative-info .creative-desc{
+    line-height: 1.5;
+    padding: 10px 0;
+}
+.creative .creative-info .creative-desc a{
+    text-decoration: none;
+}
+
+/*
+============================
+    Media Creative Directory
+============================
+*/
+
+@media (max-width : 768px){
+    .creative .creative-info{
+        width: 100%;
+        float: none;
+    }
+}
+
+/*
+==============================
+    social media
+==============================
+*/
+.social-media{
+    height: auto;
+    overflow: hidden;
+}
+.social-media .social{
+    width: 33.33%;
+    padding: 100px 0px 100px 60px;
+    float: left;
+    box-sizing: border-box;
+}
+.social-media .social .icon{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #fff;
+    color: #888;
+    float: left;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.social-media .social p span{
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.social-media .social p span.info1{
+    font-weight: bold;
+}
+.social-media .social p span.info2{
+font-size: 20px;
+}
+
+
+.social-media .social.face{
+    background: #3b5998;
+}
+.social-media .social.twitter{
+   background:#498cbf ;
+}
+.social-media .social.pin{
+    background: #cc2127
+}
+/*
+============================
+    Media social media
+============================
+*/
+
+@media (max-width : 991px){
+    .social-media .social{
+        width: 100%;
+        float: none;
+    }
+}
+
+/*
+==============================
+    Drop
+==============================
+*/
+.drop{
+    padding: 50px;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+.drop .drop-title{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.drop .drop-title span{
+    font-weight: normal;
+}
+.drop input{
+    box-sizing: border-box;
+    padding: 5px;
+}
+.drop .drop-info{
+    overflow: hidden;
+    
+
+}
+.drop .drop-info input{
+    width: 49%;
+    margin-bottom: 10px;
+    outline: 0;
+}
+.drop .drop-info input[type=text]{
+    float: left;
+}
+.drop .drop-info input[type=email]{
+    float: right;
+}
+.drop .sub{
+    width: 100%;
+    margin-bottom: 10px;
+    outline: 0;
+
+}
+.drop textarea{
+    width: 100%;
+    outline: 0;
+    margin-bottom: 10px;
+    background: #ccc;
+    padding: 5px;
+    color: #888;
+}
+.drop input[type=submit]{
+    width: 60%;
+    background: #fff;
+    color: #888;
+    border: 1px solid #888;
+    
+    cursor: pointer;
+
+}
+/*
+============================
+    Media drop
+============================
+*/
+@media (max-width : 576px){
+    .drop .drop-title{
+        font-size: 35px;
+    }
+    .drop .drop-info input{
+        width: 100%;
+        
+    }
+}
+/*
+==============================
+    footer
+==============================
+*/
+.footer{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.footer p{
+    color: #888;
+}
